@@ -2,25 +2,19 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+#svg_3 {
+  animation: blinker 1.5s linear infinite;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+@keyframes blinker {
+  50% {
+    opacity: 0;
   }
-  body {
-    color: white;
-    background: black;
-  }
+}
+
+::selection {
+  background: #b1b2ff;
+  color: #000;
 }
