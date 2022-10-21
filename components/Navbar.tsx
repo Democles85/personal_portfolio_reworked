@@ -77,6 +77,7 @@ const Navbar = (props: { path: any }) => {
           alignItems={'center'}
           justifyContent={'left'}
           flexGrow={1}
+          // fontFamily={"'Silkscreen', cursive"}
         >
           <LinkItem href="/" path={path} _target={''}>
             Home
