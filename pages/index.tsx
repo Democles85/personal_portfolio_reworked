@@ -12,7 +12,8 @@ import {
   StatLabel,
   StatNumber,
   StatHelpText,
-  Progress
+  Progress,
+  SimpleGrid
 } from '@chakra-ui/react'
 import TypewriterComponent from 'typewriter-effect'
 import type { NextPage } from 'next'
@@ -212,18 +213,9 @@ const Home: NextPage = () => {
           My Skills
         </Heading>
         <Container maxW={'container.sm'}>
-          <Box
-            display={'flex'}
-            alignItems={'center'}
-            justifyContent={'space-evenly'}
-          >
-            <Box
-              border={'1px solid #fff'}
-              borderRadius={'lg'}
-              padding={5}
-              width={'560px'}
-            >
-              <Stat>
+          <SimpleGrid columns={2} spacing={10}>
+            <Box bg="tomato">
+              <Stat p={5}>
                 <StatLabel>HTML</StatLabel>
                 <StatNumber>90%</StatNumber>
                 <StatHelpText>
@@ -231,9 +223,19 @@ const Home: NextPage = () => {
                 </StatHelpText>
               </Stat>
             </Box>
-            <Box border={'1px solid #fff'} borderRadius={'lg'} padding={5}>
-              {numOfRepos}
-            </Box>
+            <Box bg="tomato" height="80px"></Box>
+            <Box bg="tomato" height="80px"></Box>
+            <Box bg="tomato" height="80px"></Box>
+            <Box bg="tomato" height="80px"></Box>
+          </SimpleGrid>
+
+          <Box
+            border={'1px solid #fff'}
+            borderRadius={'lg'}
+            padding={5}
+            width={'100%'}
+          >
+            {numOfRepos}
           </Box>
         </Container>
       </Section>
