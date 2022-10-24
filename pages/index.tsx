@@ -472,7 +472,6 @@ const Home: NextPage = () => {
               </Link>
             </ListItem>
             <ListItem>
-              {/* Discord Tag */}
               <Link
                 href="https://www.discordapp.com/users/336600578237136896"
                 target="_blank"
