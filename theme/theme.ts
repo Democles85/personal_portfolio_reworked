@@ -24,6 +24,13 @@ const components = {
         textDecorationThickness: '0.2rem',
         marginTop: '1rem',
         marginBottom: '1rem'
+      },
+      'skill-card-title': {
+        fontSize: '1.25rem',
+        textDecoration: 'none',
+        marginTop: '1rem',
+        marginBottom: '1rem',
+        fontFamily: "'Reem Kufi Ink', sans-serif"
       }
     }
   },

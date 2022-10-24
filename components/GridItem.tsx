@@ -24,7 +24,9 @@ export const GridItem = ({
         src={thumbnail}
         alt={title}
         className={'grid-item-thumbnail'}
-        placeholder={'blur'}
+        loading={'lazy'}
+        width={400}
+        height={240}
       />
       <LinkOverlay href={href} target={'_blank'}>
         <Text mt={2}>{title}</Text>

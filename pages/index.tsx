@@ -13,7 +13,10 @@ import {
   StatNumber,
   StatHelpText,
   Progress,
-  SimpleGrid
+  SimpleGrid,
+  Divider,
+  List,
+  ListItem
 } from '@chakra-ui/react'
 import TypewriterComponent from 'typewriter-effect'
 import type { NextPage } from 'next'
@@ -24,7 +27,16 @@ import Paragraph from '../components/Paragraph'
 import { ChevronRightIcon, ExternalLinkIcon } from '@chakra-ui/icons'
 import { BioSection, BioYear } from '../components/Bio'
 import useSWR from 'swr'
+import styles from '../styles/skills.module.css'
 import fetcher from '../utils/fetcher'
+import {
+  IoLogoTwitter,
+  IoLogoInstagram,
+  IoLogoGithub,
+  IoLogoDiscord
+  // IoLogoDiscord
+} from 'react-icons/io5'
+import { GridItem } from '../components/GridItem'
 
 const ProfileImage = chakra(Image, {
   shouldForwardProp: prop => ['width', 'height', 'src', 'alt'].includes(prop)
@@ -33,6 +45,19 @@ const ProfileImage = chakra(Image, {
 const Home: NextPage = () => {
   const { data, error } = useSWR('/api/github', fetcher)
   const numOfRepos = data?.repoCount
+
+  const mouseMoveHandler = (e: { clientX: number; clientY: number }) => {
+    for (const card of document.getElementsByClassName(
+      styles.card
+    ) as HTMLCollectionOf<HTMLElement>) {
+      const rect = card.getBoundingClientRect(),
+        x = e.clientX - rect.left,
+        y = e.clientY - rect.top
+
+      card.style.setProperty('--mouse-x', `${x}px`)
+      card.style.setProperty('--mouse-y', `${y}px`)
+    }
+  }
 
   return (
     <Layout title={undefined}>
@@ -139,7 +164,7 @@ const Home: NextPage = () => {
             .
           </Paragraph>
           <Box display={'flex'} justifyContent={'center'} my={4}>
-            <NextLink href="/works">
+            <NextLink href="/projects">
               <Button rightIcon={<ChevronRightIcon />} colorScheme="lavender">
                 My portfolio
               </Button>
@@ -212,31 +237,256 @@ const Home: NextPage = () => {
         >
           My Skills
         </Heading>
-        <Container maxW={'container.sm'}>
-          <SimpleGrid columns={2} spacing={10}>
-            <Box bg="tomato">
-              <Stat p={5}>
-                <StatLabel>HTML</StatLabel>
-                <StatNumber>90%</StatNumber>
-                <StatHelpText>
-                  <Progress value={90} colorScheme={'lavender'} size={'sm'} />
-                </StatHelpText>
-              </Stat>
-            </Box>
-            <Box bg="tomato" height="80px"></Box>
-            <Box bg="tomato" height="80px"></Box>
-            <Box bg="tomato" height="80px"></Box>
-            <Box bg="tomato" height="80px"></Box>
-          </SimpleGrid>
-
+        <Container maxW={'container.md'}>
           <Box
-            border={'1px solid #fff'}
-            borderRadius={'lg'}
-            padding={5}
-            width={'100%'}
+            className={styles.cards}
+            id="cards"
+            onMouseMove={e => {
+              mouseMoveHandler(e)
+            }}
+            color={'#fff'}
           >
-            {numOfRepos}
+            <Box className={styles.card}>
+              <Box className={styles['card-content']}>
+                <Heading
+                  as={'h1'}
+                  variant={'skill-card-title'}
+                  textAlign={'right'}
+                >
+                  Web Development
+                </Heading>
+                <Divider />
+                <Box>
+                  <Stat p={2}>
+                    <StatLabel>HTML</StatLabel>
+                    <StatNumber>100%</StatNumber>
+                    <StatHelpText>
+                      <Progress
+                        value={100}
+                        colorScheme={'lavender'}
+                        size={'sm'}
+                      />
+                    </StatHelpText>
+                  </Stat>
+                  <Stat p={2}>
+                    <StatLabel>JAVASCRIPT & TYPESCRIPT</StatLabel>
+                    <StatNumber>90%</StatNumber>
+                    <StatHelpText>
+                      <Progress
+                        value={90}
+                        colorScheme={'lavender'}
+                        size={'sm'}
+                      />
+                    </StatHelpText>
+                  </Stat>
+                  <Stat p={2}>
+                    <StatLabel>CSS</StatLabel>
+                    <StatNumber>70%</StatNumber>
+                    <StatHelpText>
+                      <Progress
+                        value={70}
+                        colorScheme={'lavender'}
+                        size={'sm'}
+                      />
+                    </StatHelpText>
+                  </Stat>
+                </Box>
+              </Box>
+            </Box>
+            <Box className={styles.card}>
+              <Box className={styles['card-content']}>
+                <Heading
+                  as={'h1'}
+                  variant={'skill-card-title'}
+                  textAlign={'right'}
+                >
+                  Programming Languages
+                </Heading>
+                <Divider />
+                <Box>
+                  <Stat p={2}>
+                    <StatLabel>C</StatLabel>
+                    <StatNumber>56%</StatNumber>
+                    <StatHelpText>
+                      <Progress
+                        value={56}
+                        colorScheme={'lavender'}
+                        size={'sm'}
+                      />
+                    </StatHelpText>
+                  </Stat>
+                  <Stat p={2}>
+                    <StatLabel>C++</StatLabel>
+                    <StatNumber>50%</StatNumber>
+                    <StatHelpText>
+                      <Progress
+                        value={50}
+                        colorScheme={'lavender'}
+                        size={'sm'}
+                      />
+                    </StatHelpText>
+                  </Stat>
+                  <Stat p={2}>
+                    <StatLabel>C#</StatLabel>
+                    <StatNumber>35%</StatNumber>
+                    <StatHelpText>
+                      <Progress
+                        value={35}
+                        colorScheme={'lavender'}
+                        size={'sm'}
+                      />
+                    </StatHelpText>
+                  </Stat>
+                </Box>
+              </Box>
+            </Box>
+            <Box className={styles.card}>
+              <Box className={styles['card-content']}>
+                <Heading
+                  as={'h1'}
+                  variant={'skill-card-title'}
+                  textAlign={'right'}
+                >
+                  Databases
+                </Heading>
+                <Divider />
+                <Box>
+                  <Stat p={2}>
+                    <StatLabel>MONGODB</StatLabel>
+                    <StatNumber>75%</StatNumber>
+                    <StatHelpText>
+                      <Progress
+                        value={75}
+                        colorScheme={'lavender'}
+                        size={'sm'}
+                      />
+                    </StatHelpText>
+                  </Stat>
+                  <Stat p={2}>
+                    <StatLabel>SANITY</StatLabel>
+                    <StatNumber>60%</StatNumber>
+                    <StatHelpText>
+                      <Progress
+                        value={60}
+                        colorScheme={'lavender'}
+                        size={'sm'}
+                      />
+                    </StatHelpText>
+                  </Stat>
+                  <Stat p={2}>
+                    <StatLabel>GRAPHQL</StatLabel>
+                    <StatNumber>45%</StatNumber>
+                    <StatHelpText>
+                      <Progress
+                        value={45}
+                        colorScheme={'lavender'}
+                        size={'sm'}
+                      />
+                    </StatHelpText>
+                  </Stat>
+                </Box>
+              </Box>
+            </Box>
           </Box>
+        </Container>
+      </Section>
+
+      {/* <Section delay={1.4}>
+        <Heading
+          as={'h3'}
+          variant={'section-title'}
+          // fontFamily={"'Silkscreen', cursive"}
+          fontFamily={"'Reem Kufi Ink', sans-serif"}
+        >
+          My Projects
+        </Heading>
+        <Container maxW={'container.sm'}>
+          <SimpleGrid columns={[1, 1, 2]} spacing={10}>
+            <GridItem
+              id={'project-1'}
+              href={'https://univlora-student-forum.vercel.app/'}
+              title={'Univlora Student Forum'}
+              thumbnail={'/images/works/univlora_student_forum.png'}
+            >
+              A student forum for the University of Vlora, Albania. It&apos;s
+              built with Next.js, GraphQL, and Tailwind CSS.
+            </GridItem>
+          </SimpleGrid>
+        </Container>
+      </Section> */}
+
+      <Section delay={1.4}>
+        <Heading
+          as={'h3'}
+          variant={'section-title'}
+          fontFamily={"'Reem Kufi Ink', sans-serif"}
+        >
+          On the Internet
+        </Heading>
+        <Container
+          maxW={{
+            base: 'container.sm',
+            md: 'container.sm',
+            lg: 'container.md'
+          }}
+        >
+          <List
+            display={'flex'}
+            flexDir={{ base: 'column', md: 'row', lg: 'row' }}
+            justifyContent={'space-between'}
+          >
+            <ListItem>
+              <Link href="https://github.com/Democles85" target="_blank">
+                <Button
+                  variant="ghost"
+                  colorScheme="lavender"
+                  leftIcon={<Icon as={IoLogoGithub} />}
+                >
+                  Democles85
+                </Button>
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link href="https://twitter.com/LeJhin1" target="_blank">
+                <Button
+                  variant="ghost"
+                  colorScheme="lavender"
+                  leftIcon={<Icon as={IoLogoTwitter} />}
+                >
+                  LeJhin1
+                </Button>
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link
+                href="https://www.instagram.com/sixheitartari/"
+                target="_blank"
+              >
+                <Button
+                  variant="ghost"
+                  colorScheme="lavender"
+                  leftIcon={<Icon as={IoLogoInstagram} />}
+                >
+                  sixhei_tartari
+                </Button>
+              </Link>
+            </ListItem>
+            <ListItem>
+              {/* Discord Tag */}
+              <Link
+                href="https://www.discordapp.com/users/336600578237136896"
+                target="_blank"
+              >
+                <Button
+                  variant="ghost"
+                  colorScheme="lavender"
+                  leftIcon={<Icon as={IoLogoDiscord} />}
+                >
+                  Democles#8413
+                </Button>
+              </Link>
+            </ListItem>
+          </List>
         </Container>
       </Section>
     </Layout>
