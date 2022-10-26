@@ -50,7 +50,7 @@ const Navbar = (props: { path: any }) => {
       as={'nav'}
       position={'fixed'}
       w={'100%'}
-      zIndex={1}
+      zIndex={10000}
       bg={useColorModeValue('#ffffff40', '#20202380')}
       style={{ backdropFilter: 'blur(10px)' }}
       {...props}
