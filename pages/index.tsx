@@ -124,11 +124,14 @@ const Home: NextPage = () => {
               borderStyle={'solid'}
               w={'100px'}
               h={'100px'}
-              borderRadius={'full'}
+              borderRadius={'lg'}
               overflow={'hidden'}
               display={'inline-block'}
             >
-              <Image src={'/images/avatar.png'} alt={'Profile image'} />
+              <Image
+                src={'/images/sixhei_tartari.jpeg'}
+                alt={'Profile image'}
+              />
             </Box>
           </Box>
         </Box>
