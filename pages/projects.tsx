@@ -28,7 +28,7 @@ const Projects = () => {
           thumbnail={'/images/test.png'}
           id={'1'}
         >
-          Hey
+          Coming soon ...
         </ProjectCard>
       </Box>
     </Layout>
