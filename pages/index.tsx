@@ -404,6 +404,53 @@ const Home: NextPage = () => {
                 </Box>
               </Box>
             </Box>
+            <Box className={styles.card}>
+              <Box className={styles['card-content']}>
+                <Heading
+                  as={'h1'}
+                  variant={'skill-card-title'}
+                  textAlign={'right'}
+                >
+                  Extras
+                </Heading>
+                <Divider />
+                <Box>
+                  <Stat p={2}>
+                    <StatLabel>JAVA</StatLabel>
+                    <StatNumber>50%</StatNumber>
+                    <StatHelpText>
+                      <Progress
+                        value={50}
+                        colorScheme={'lavender'}
+                        size={'sm'}
+                      />
+                    </StatHelpText>
+                  </Stat>
+                  <Stat p={2}>
+                    <StatLabel>PYTHON</StatLabel>
+                    <StatNumber>40%</StatNumber>
+                    <StatHelpText>
+                      <Progress
+                        value={40}
+                        colorScheme={'lavender'}
+                        size={'sm'}
+                      />
+                    </StatHelpText>
+                  </Stat>
+                  <Stat p={2}>
+                    <StatLabel>GOLANG</StatLabel>
+                    <StatNumber>15%</StatNumber>
+                    <StatHelpText>
+                      <Progress
+                        value={15}
+                        colorScheme={'lavender'}
+                        size={'sm'}
+                      />
+                    </StatHelpText>
+                  </Stat>
+                </Box>
+              </Box>
+            </Box>
           </Box>
         </Container>
       </Section>
