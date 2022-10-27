@@ -16,7 +16,8 @@ import {
   SimpleGrid,
   Divider,
   List,
-  ListItem
+  ListItem,
+  useColorMode
 } from '@chakra-ui/react'
 import TypewriterComponent from 'typewriter-effect'
 import type { NextPage } from 'next'
@@ -36,7 +37,7 @@ import {
   IoLogoDiscord
   // IoLogoDiscord
 } from 'react-icons/io5'
-import { GridItem } from '../components/GridItem'
+import { useEffect, useState } from 'react'
 
 const ProfileImage = chakra(Image, {
   shouldForwardProp: prop => ['width', 'height', 'src', 'alt'].includes(prop)
@@ -45,6 +46,19 @@ const ProfileImage = chakra(Image, {
 const Home: NextPage = () => {
   const { data, error } = useSWR('/api/github', fetcher)
   const numOfRepos = data?.repoCount
+
+  const { colorMode } = useColorMode()
+  // console.log(colorMode)
+
+  useEffect(() => {
+    for (const card of document.getElementsByClassName(
+      styles['card-content']
+    ) as HTMLCollectionOf<HTMLElement>) {
+      if (colorMode === 'dark')
+        card.style.setProperty('background', 'rgb(32, 32, 35)')
+      else card.style.setProperty('background', '#fff')
+    }
+  })
 
   const mouseMoveHandler = (e: { clientX: number; clientY: number }) => {
     for (const card of document.getElementsByClassName(
@@ -247,7 +261,7 @@ const Home: NextPage = () => {
             onMouseMove={e => {
               mouseMoveHandler(e)
             }}
-            color={'#fff'}
+            color={useColorModeValue('gray.800', 'white')}
           >
             <Box className={styles.card}>
               <Box className={styles['card-content']}>
