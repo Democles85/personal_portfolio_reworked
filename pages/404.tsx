@@ -44,9 +44,10 @@ const NotFound: NextPage = () => {
         alignItems={'center'}
         justifyContent={'center'}
       >
-        <NextLink href="/">
-          <Button colorScheme="lavender">Return to home</Button>
-        </NextLink>
+        {/* Go back on browser history */}
+        <Button colorScheme="lavender" onClick={() => history.back()}>
+          Return Back
+        </Button>
       </Box>
     </Container>
   )

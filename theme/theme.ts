@@ -33,12 +33,6 @@ const components = {
         fontFamily: "'Reem Kufi Ink', sans-serif"
       }
     }
-  },
-  Link: {
-    baseStyle: (props: StyleFunctionProps | Record<string, any>) => ({
-      color: mode('#3d7aed', '#ff63c3')(props),
-      textUnderlineOffset: '0.2rem'
-    })
   }
 }
 

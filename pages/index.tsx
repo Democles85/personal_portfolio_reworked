@@ -34,7 +34,8 @@ import {
   IoLogoTwitter,
   IoLogoInstagram,
   IoLogoGithub,
-  IoLogoDiscord
+  IoLogoDiscord,
+  IoLogoLinkedin
   // IoLogoDiscord
 } from 'react-icons/io5'
 import { useEffect, useState } from 'react'
@@ -498,6 +499,7 @@ const Home: NextPage = () => {
             display={'flex'}
             flexDir={{ base: 'column', md: 'row', lg: 'row' }}
             justifyContent={'space-between'}
+            maxW={'inherit'}
           >
             <ListItem>
               <Link href="https://github.com/Democles85" target="_blank">
@@ -507,6 +509,20 @@ const Home: NextPage = () => {
                   leftIcon={<Icon as={IoLogoGithub} />}
                 >
                   Democles85
+                </Button>
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link
+                href="https://www.linkedin.com/in/sixhei-tartari/"
+                target="_blank"
+              >
+                <Button
+                  variant="ghost"
+                  colorScheme="lavender"
+                  leftIcon={<Icon as={IoLogoLinkedin} />}
+                >
+                  Sixhei Tartari
                 </Button>
               </Link>
             </ListItem>
