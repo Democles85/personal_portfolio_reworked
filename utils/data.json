@@ -1,0 +1,76 @@
+{
+  "$projects": [
+    {
+      "$title": "Univlora Student Forum",
+      "$id": "OCsMv/VG",
+      "$slug": "univlora-student-forum",
+      "description": "A forum / blog website used by the students to get information about subjects and undertake courses or quizzes about the classes they enroll.",
+      "author": "Sixhei Tartari",
+      "year": "2022",
+      "dateStarted": "August 2022",
+      "dateFinished": "October 2022",
+      "timeToComplete": "2 months",
+      "technologies": [
+        "Next.js",
+        "GraphQL",
+        "Monaco Editor",
+        "Tailwind CSS",
+        "Chakra UI",
+        "SendGrid",
+        "Emotion",
+        "React Icons",
+        "React Hook Form",
+        "Animate Presence"
+      ],
+      "thumbnail": "/images/works/univlora_student_forum.png"
+    },
+    {
+      "$title": "Univlora Student Forum",
+      "$id": "vOMv8Qrl",
+      "$slug": "univlora-student-forum",
+      "description": "A forum / blog website used by the students to get information about subjects and undertake courses or quizzes about the classes they enroll.",
+      "author": "Sixhei Tartari",
+      "year": "2022",
+      "dateStarted": "August 2022",
+      "dateFinished": "October 2022",
+      "timeToComplete": "2 months",
+      "technologies": [
+        "Next.js",
+        "GraphQL",
+        "Monaco Editor",
+        "Tailwind CSS",
+        "Chakra UI",
+        "SendGrid",
+        "Emotion",
+        "React Icons",
+        "React Hook Form",
+        "Animate Presence"
+      ],
+      "thumbnail": "/images/works/univlora_student_forum.png"
+    },
+    {
+      "$title": "Univlora Student Forum",
+      "$id": "S1uABBnC",
+      "$slug": "univlora-student-forum",
+      "description": "A forum / blog website used by the students to get information about subjects and undertake courses or quizzes about the classes they enroll.",
+      "author": "Sixhei Tartari",
+      "year": "2022",
+      "dateStarted": "August 2022",
+      "dateFinished": "October 2022",
+      "timeToComplete": "2 months",
+      "technologies": [
+        "Next.js",
+        "GraphQL",
+        "Monaco Editor",
+        "Tailwind CSS",
+        "Chakra UI",
+        "SendGrid",
+        "Emotion",
+        "React Icons",
+        "React Hook Form",
+        "Animate Presence"
+      ],
+      "thumbnail": "/images/works/univlora_student_forum.png"
+    }
+  ]
+}

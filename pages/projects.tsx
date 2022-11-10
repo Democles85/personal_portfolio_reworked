@@ -9,8 +9,9 @@ import {
   useColorModeValue
 } from '@chakra-ui/react'
 import { Layout } from '../components/layouts/Layout'
-import styles from '../styles/skills.module.css'
+import styles from '../styles/projects.module.css'
 import Section from '../components/Section'
+import data from '../utils/data.json'
 
 const Projects = () => {
   const mouseMoveHandler = (e: { clientX: number; clientY: number }) => {
@@ -37,72 +38,36 @@ const Projects = () => {
           Projects - 2022
         </Heading>
         <Box
+          mt={'3rem'}
           className={styles.cards}
           id={'cards'}
           onMouseMove={e => {
             mouseMoveHandler(e)
           }}
           color={useColorModeValue('gray.800', 'white')}
-          display={'flex'}
-          flexWrap={'wrap'}
-          justifyContent={'space-around'}
         >
-          <Link href={'/projects/univlora-student-forum'}>
-            <Tooltip label={'July - 2022'} fontSize={'lg'} bg={'lavender.200'}>
+          {data.$projects.map((project, index) => (
+            <Link key={project.$id} href={`/projects/${project.$slug}`}>
               <Box className={styles.card}>
                 <Box className={styles['card-content']}>
-                  <Heading
-                    as={'h1'}
-                    variant={'skill-card-title'}
-                    textAlign={'center'}
-                  >
-                    Univlora Student Forum
-                    <Divider mt={2} />
-                  </Heading>
+                  <Text>{project.dateFinished}</Text>
+                  <Heading as={'h2'}>{project.$title}</Heading>
                   <Image
-                    src={'/images/works/univlora_student_forum.png'}
-                    alt={'Maths Game Thumbnail'}
+                    src={project.thumbnail}
+                    alt={project.$title}
                     width={'100%'}
                   />
-                  <Text textAlign={'center'} mt={2}>
-                    A forum / blog website used by the students to get
-                    information about subjects and undertake courses or quizzes
-                    about the classes they enroll.
+                  <Text
+                    mt={2}
+                    textAlign={'justify'}
+                    className={styles['card-description']}
+                  >
+                    {project.description}
                   </Text>
                 </Box>
               </Box>
-            </Tooltip>
-          </Link>
-          <Link href={'/projects/maths-game'}>
-            <Tooltip
-              label={'September - 2022'}
-              fontSize={'lg'}
-              bg={'lavender.200'}
-            >
-              <Box className={styles.card}>
-                <Box className={styles['card-content']}>
-                  <Heading
-                    as={'h1'}
-                    variant={'skill-card-title'}
-                    textAlign={'center'}
-                  >
-                    Sound Me Youth
-                    <Divider mt={2} />
-                  </Heading>
-                  <Image
-                    src={'/images/works/sound_me_youth_thumbnail.png'}
-                    alt={'Maths Game Thumbnail'}
-                    width={'100%'}
-                  />
-                  <Text textAlign={'center'} mt={2}>
-                    A landing page for the events of Sound Me Youth in the
-                    captial of Albania, Tirana, about the wellbeing and mental
-                    state of the Albanian youth.
-                  </Text>
-                </Box>
-              </Box>
-            </Tooltip>
-          </Link>
+            </Link>
+          ))}
         </Box>
       </Section>
     </Layout>

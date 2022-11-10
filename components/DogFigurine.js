@@ -58,7 +58,7 @@ const DogFigurine = () => {
         scale,
         -scale,
         0.01,
-        50000
+        70000
       )
       camera.position.copy(initialCameraPosition)
       camera.lookAt(target)

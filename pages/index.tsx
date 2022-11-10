@@ -255,7 +255,7 @@ const Home: NextPage = () => {
         >
           My Skills
         </Heading>
-        <Container maxW={'container.md'}>
+        <Container maxW={'container.lg'}>
           <Box
             className={styles.cards}
             id="cards"
