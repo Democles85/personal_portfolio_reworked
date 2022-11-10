@@ -64,13 +64,11 @@ const Projects = () => {
                     alt={'Maths Game Thumbnail'}
                     width={'100%'}
                   />
-                  <Box mt={2} opacity={0.7}>
-                    <Text textAlign={'center'}>
-                      A forum / blog website used by the students to get
-                      information about subjects and undertake courses or
-                      quizzes about the classes they enroll.
-                    </Text>
-                  </Box>
+                  <Text textAlign={'center'} mt={2}>
+                    A forum / blog website used by the students to get
+                    information about subjects and undertake courses or quizzes
+                    about the classes they enroll.
+                  </Text>
                 </Box>
               </Box>
             </Tooltip>
@@ -96,13 +94,11 @@ const Projects = () => {
                     alt={'Maths Game Thumbnail'}
                     width={'100%'}
                   />
-                  <Box mt={2} opacity={0.7}>
-                    <Text textAlign={'center'}>
-                      A landing page for the events of Sound Me Youth in the
-                      captial of Albania, Tirana, about the wellbeing and mental
-                      state of the Albanian youth.
-                    </Text>
-                  </Box>
+                  <Text textAlign={'center'} mt={2}>
+                    A landing page for the events of Sound Me Youth in the
+                    captial of Albania, Tirana, about the wellbeing and mental
+                    state of the Albanian youth.
+                  </Text>
                 </Box>
               </Box>
             </Tooltip>
