@@ -31,6 +31,7 @@ export default function Project() {
         >
           {project?.$title}
         </Heading>
+        Coming Soon ...
       </Box>
     </Layout>
   )

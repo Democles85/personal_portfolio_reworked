@@ -17,7 +17,7 @@ const components = {
         color: mode('#000', '#fff')(props)
       }),
       'section-title': {
-        fontSize: '1.25rem',
+        fontSize: '1.75rem',
         textDecoration: 'underline',
         textUnderlineOffset: '0.5rem',
         textDecorationColor: '#525252',

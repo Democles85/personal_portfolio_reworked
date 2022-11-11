@@ -22,55 +22,84 @@
         "React Hook Form",
         "Animate Presence"
       ],
-      "thumbnail": "/images/works/univlora_student_forum.png"
+      "thumbnail": "/images/works/univlora_student_forum.png",
+      "images": [
+        "/images/works/univlora_student_forum_1.png"
+      ]
     },
     {
-      "$title": "Univlora Student Forum",
+      "$title": "Resonate with Yourself",
       "$id": "vOMv8Qrl",
-      "$slug": "univlora-student-forum",
-      "description": "A forum / blog website used by the students to get information about subjects and undertake courses or quizzes about the classes they enroll.",
+      "$slug": "resonate-with-yourself",
+      "description": "A landing page for a therapist including (About Me - Contact Form - General Information - Services)",
       "author": "Sixhei Tartari",
       "year": "2022",
-      "dateStarted": "August 2022",
-      "dateFinished": "October 2022",
-      "timeToComplete": "2 months",
+      "dateStarted": "April 2022",
+      "dateFinished": "August 2022",
+      "timeToComplete": "4 months",
       "technologies": [
         "Next.js",
-        "GraphQL",
-        "Monaco Editor",
-        "Tailwind CSS",
         "Chakra UI",
         "SendGrid",
-        "Emotion",
-        "React Icons",
-        "React Hook Form",
-        "Animate Presence"
+        "GraphQL"
       ],
-      "thumbnail": "/images/works/univlora_student_forum.png"
+      "thumbnail": "/images/works/resonate_with_yourself_thumbnail.png"
     },
     {
-      "$title": "Univlora Student Forum",
+      "$title": "Sound Me Youth",
       "$id": "S1uABBnC",
-      "$slug": "univlora-student-forum",
-      "description": "A forum / blog website used by the students to get information about subjects and undertake courses or quizzes about the classes they enroll.",
+      "$slug": "sound-me-youth",
+      "description": "A landing page for the events of Sound Me Youth in the capital of Albania, Tirana, about the wellbeing and mental state of the Albanian youth.",
       "author": "Sixhei Tartari",
       "year": "2022",
-      "dateStarted": "August 2022",
-      "dateFinished": "October 2022",
-      "timeToComplete": "2 months",
+      "dateStarted": "September 2022",
+      "dateFinished": "September 2022",
+      "timeToComplete": "2 weeks",
       "technologies": [
         "Next.js",
-        "GraphQL",
-        "Monaco Editor",
-        "Tailwind CSS",
         "Chakra UI",
         "SendGrid",
-        "Emotion",
-        "React Icons",
-        "React Hook Form",
-        "Animate Presence"
+        "Google Maps API"
       ],
-      "thumbnail": "/images/works/univlora_student_forum.png"
+      "thumbnail": "/images/works/sound_me_youth_thumbnail.png"
+    },
+    {
+      "$title": "Math Game",
+      "$id": "PDN2Dm7+",
+      "$slug": "math-game",
+      "description": "A webpage made in plain HTML. It's a numbers game with time tracking your addition and subtraction and giving you a score at the end.",
+      "author": "Sixhei Tartari",
+      "year": "2019",
+      "dateStarted": "December 2019",
+      "dateFinished": "December 2019",
+      "timeToComplete": "2 days",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "thumbnail": "/images/works/maths_game_thumbnail.png"
+    },
+    {
+      "$title": "News Website",
+      "$id": "HPCbYc50",
+      "$slug": "news-website",
+      "description": "My first attempt on creating a functional website. Having a boring topic, I didn't have much to work with and also now that I look back at it, I am ashamed, not too much to say anyway.",
+      "author": "Sixhei Tartari",
+      "year": "2019",
+      "dateStarted": "December 2019",
+      "dateFinished": "January 2020",
+      "timeToComplete": "3 weeks",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Bootstrap",
+        "Tailwind CSS",
+        "jQuery",
+        "Fa Icons"
+      ],
+      "thumbnail": "/images/works/democles_news_thumbnail.png"
     }
   ]
 }

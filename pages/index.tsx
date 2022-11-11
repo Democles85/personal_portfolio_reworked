@@ -175,9 +175,12 @@ const Home: NextPage = () => {
             <Link
               href={'https://univlora-student-forum.vercel.app/'}
               target={'_blank'}
+              background={'linear-gradient(90deg, #ff8a00, #e52e71)'}
+              backgroundClip={'text'}
+              fontWeight={'bold'}
             >
               Univlora Student Forum
-              <Icon as={ExternalLinkIcon} ml={1} mb={3} />
+              <Icon as={ExternalLinkIcon} ml={1} mb={3} color={'#e52e71'} />
             </Link>
             .
           </Paragraph>
