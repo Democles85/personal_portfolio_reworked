@@ -1,4 +1,38 @@
 {
+  "$bio": [
+    {
+      "$year": "2001",
+      "description": "Born in Vlora, Albania on 12th of March."
+    },
+    {
+      "$year": "2004",
+      "description": "Just at the age of 3 I was interacting with my first computer, playing games like Tetris and watching cartoons."
+    },
+    {
+      "$year": "2008",
+      "description": "I started to learn how to use computers and made my first website on note pad."
+    },
+    {
+      "$year": "2010",
+      "description": "A cousin of mine introduced me to the world of Minecraft, a sandbox game that had just came out and it gave you the freedom to do anything and create things only limited by my imagination."
+    },
+    {
+      "$year": "2011",
+      "description": "After playing Minecraft for a year, I was growing curious about how people created such games and I started to check out tutorials on how to make games. I started to look around in the Minecraft modding community and I found a mod creation tool called 'Minecraft Coder Pack' which used Java as a programming language."
+    },
+    {
+      "$year": "2016",
+      "description": "Started working as a local freelancer in web development and UI/UX design."
+    },
+    {
+      "$year": "2019",
+      "description": "Joined the University of Vlora, Albania to study Computer Science."
+    },
+    {
+      "$year": "2022",
+      "description": "Graduated from the University of Vlora, with a Bachelor of Science in Computer Science. I'm currently working as a freelance developer and I'm always looking for new projects."
+    }
+  ],
   "$projects": [
     {
       "$title": "Univlora Student Forum",

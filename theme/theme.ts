@@ -33,6 +33,14 @@ const components = {
         fontFamily: "'Reem Kufi Ink', sans-serif"
       }
     }
+  },
+  Link: {
+    variants: {
+      'project-link': (props: StyleFunctionProps | Record<string, any>) => ({
+        textDecoration: 'none',
+        color: mode('#3D7AED', '#FF63C3')(props)
+      })
+    }
   }
 }
 

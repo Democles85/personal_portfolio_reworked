@@ -1,13 +1,18 @@
 import {
+  Badge,
   Box,
   Button,
   Container,
   Divider,
   Heading,
+  List,
+  ListItem,
   Text
 } from '@chakra-ui/react'
 import { useRouter } from 'next/router'
 import { Layout } from '../../components/layouts/Layout'
+import Paragraph from '../../components/Paragraph'
+import { Meta, Title } from '../../components/ProjectsItems'
 import data from '../../utils/data.json'
 
 export default function Project() {
@@ -23,16 +28,28 @@ export default function Project() {
 
   return (
     <Layout title={project?.$title}>
-      <Box>
-        <Heading
-          as={'h1'}
-          textAlign={'center'}
-          fontFamily={"'Reem Kufi Ink', sans-serif"}
-        >
-          {project?.$title}
-        </Heading>
-        Coming Soon ...
-      </Box>
+      <Container maxW={'container.sm'}>
+        <Box pt={{ base: '1rem', md: '2rem', lg: '5rem' }}>
+          <Title>
+            {project?.$title}
+            <Badge mx={2}>
+              {project?.dateStarted} - {project?.dateFinished}
+            </Badge>
+          </Title>
+          <Paragraph>{project?.description}</Paragraph>
+          <List ml={4} my={4}>
+            <ListItem>
+              <Meta>Stack</Meta>
+              {project?.technologies.map((item, index) => (
+                <span key={index}>
+                  {index !== 0 && ', '}
+                  {item}
+                </span>
+              ))}
+            </ListItem>
+          </List>
+        </Box>
+      </Container>
     </Layout>
   )
 }

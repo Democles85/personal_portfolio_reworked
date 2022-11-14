@@ -85,10 +85,10 @@ const Navbar = (props: { path: any }) => {
           <LinkItem href="/projects" path={path} _target={''}>
             Projects
           </LinkItem>
-          <LinkItem href="" path={path} _target={''}>
+          <LinkItem href="/services" path={path} _target={''}>
             Services
           </LinkItem>
-          <LinkItem href="" path={path} _target={''}>
+          <LinkItem href="/contact" path={path} _target={''}>
             Contact
           </LinkItem>
         </Stack>
