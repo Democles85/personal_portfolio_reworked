@@ -91,7 +91,8 @@
         "REST API",
         "CookieAuth"
       ],
-      "thumbnail": "/images/works/pizza_ordering_app_thumbnail.png"
+      "thumbnail": "/images/works/pizza_ordering_app_thumbnail.png",
+      "source": "https://github.com/Democles85/food_ordering_app"
     },
     {
       "$title": "Resonate with Yourself",
