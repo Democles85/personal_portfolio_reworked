@@ -62,7 +62,7 @@ export const Skills = () => {
               <Heading
                 as={'h1'}
                 variant={'skill-card-title'}
-                textAlign={'right'}
+                textAlign={'center'}
               >
                 Web Development
               </Heading>
@@ -101,7 +101,7 @@ export const Skills = () => {
               <Heading
                 as={'h1'}
                 variant={'skill-card-title'}
-                textAlign={'right'}
+                textAlign={'center'}
               >
                 Programming Languages
               </Heading>
@@ -136,7 +136,7 @@ export const Skills = () => {
               <Heading
                 as={'h1'}
                 variant={'skill-card-title'}
-                textAlign={'right'}
+                textAlign={'center'}
               >
                 Databases
               </Heading>
@@ -171,7 +171,7 @@ export const Skills = () => {
               <Heading
                 as={'h1'}
                 variant={'skill-card-title'}
-                textAlign={'right'}
+                textAlign={'center'}
               >
                 Extras
               </Heading>

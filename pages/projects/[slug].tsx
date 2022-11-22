@@ -6,6 +6,7 @@ import {
   Divider,
   Heading,
   Link,
+  Link,
   List,
   ListItem,
   Text
@@ -22,15 +23,12 @@ export default function Project() {
   const project = data.$projects.find(project => project.$slug === slug)
 
   // If the project is not found, show the 404 page
-  if (slug !== undefined && project === undefined) {
-    router.push('/404')
-    return null
-  }
+  if (slug !== undefined && project === undefined) router.push('/404')
 
   return (
     <Layout title={project?.$title}>
       <Container maxW={'container.sm'}>
-        <Box pt={{ base: '1rem', md: '2rem', lg: '5rem' }}>
+        <Box>
           <Title>
             {project?.$title}
             <Badge mx={2}>
