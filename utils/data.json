@@ -68,6 +68,32 @@
       "source": "https://github.com/Democles85/student_forum"
     },
     {
+      "$title": "Pizza Ordering App",
+      "$id": "OCsMv/VG",
+      "$slug": "pizza-ordering-app",
+      "link": "",
+      "description": "Coming soon...",
+      "author": "Sixhei Tartari",
+      "year": "2022",
+      "dateStarted": "April 2022",
+      "dateFinished": "June 2022",
+      "timeToComplete": "3 months",
+      "technologies": [
+        "Next.js",
+        "Tailwind CSS",
+        "Chakra UI",
+        "Emotion",
+        "React Icons",
+        "Axios",
+        "Claudinary",
+        "PayPal API",
+        "Redux Toolkit",
+        "REST API",
+        "CookieAuth"
+      ],
+      "thumbnail": "/images/works/pizza_ordering_app_thumbnail.png"
+    },
+    {
       "$title": "Resonate with Yourself",
       "$id": "vOMv8Qrl",
       "$slug": "resonate-with-yourself",

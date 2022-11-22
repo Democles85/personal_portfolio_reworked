@@ -37,7 +37,7 @@ export const Bio = () => {
                 h={2}
                 bg={circleColor}
                 borderRadius={'full'}
-                mt={'0.5rem'}
+                mt={'0.55rem'}
                 left={'-0.3rem'}
               />
             </Box>
