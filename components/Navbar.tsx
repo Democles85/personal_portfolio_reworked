@@ -1,9 +1,10 @@
-import { HamburgerIcon } from '@chakra-ui/icons'
+import { ExternalLinkIcon, HamburgerIcon } from '@chakra-ui/icons'
 import {
   Box,
   Container,
   Flex,
   Heading,
+  Icon,
   IconButton,
   Link,
   Menu,
@@ -25,7 +26,7 @@ type Props = {
 }
 
 const LinkItem = ({ href, path, _target, children, ...props }: Props) => {
-  const active = path === href
+  const active = path === href || path.startsWith(href + '/')
   const inactiveColor = useColorModeValue('#202023a0', 'whiteAlpha.900')
   return (
     <NextLink href={href} passHref>
@@ -86,18 +87,15 @@ const Navbar = (props: { path: any }) => {
           <LinkItem href="/projects" path={path} _target={''}>
             Projects
           </LinkItem>
-          <LinkItem href="/services" path={path} _target={''}>
-            Services
-          </LinkItem>
           <LinkItem href="/contact" path={path} _target={''}>
             Contact
           </LinkItem>
           <LinkItem
             href="https://github.com/Democles85/personal_portfolio_reworked/"
             path={path}
-            _target={''}
+            _target={'_blank'}
           >
-            Source
+            Source <Icon as={ExternalLinkIcon} mb={3} w={3} />
           </LinkItem>
         </Stack>
 
@@ -129,11 +127,18 @@ const Navbar = (props: { path: any }) => {
                 <NextLink href={'/projects'} passHref>
                   <MenuItem as={Link}>Projects</MenuItem>
                 </NextLink>
-                <NextLink href={'/services'} passHref>
-                  <MenuItem as={Link}>Services</MenuItem>
-                </NextLink>
                 <NextLink href={'/contact'} passHref>
                   <MenuItem as={Link}>Contact</MenuItem>
+                </NextLink>
+                <NextLink
+                  href={
+                    'https://github.com/Democles85/personal_portfolio_reworked/'
+                  }
+                  passHref
+                >
+                  <MenuItem as={Link} target={'_blank'}>
+                    Source <Icon as={ExternalLinkIcon} ml={1} mb={2} w={3} />
+                  </MenuItem>
                 </NextLink>
               </MenuList>
             </Menu>

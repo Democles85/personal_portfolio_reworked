@@ -13,9 +13,11 @@ import {
   Text,
   useColorModeValue
 } from '@chakra-ui/react'
+import data from '../utils/data.json'
 import styles from '../styles/skills.module.css'
 
 export const Skills = () => {
+  // Function to get the mouse position and change the position of the circle property
   const mouseMoveHandler = (e: { clientX: number; clientY: number }) => {
     for (const card of document.getElementsByClassName(
       styles.card
@@ -28,6 +30,12 @@ export const Skills = () => {
       card.style.setProperty('--mouse-y', `${y}px`)
     }
   }
+
+  const skills = data.$skills
+  const skillsDividerColor = useColorModeValue(
+    'rgba(37, 37, 255, 1)',
+    'rgba(255,255,255, 0.5)'
+  )
 
   return (
     <>
@@ -57,150 +65,40 @@ export const Skills = () => {
           }}
           color={useColorModeValue('gray.800', 'white')}
         >
-          <Box className={styles.card}>
-            <Box className={styles['card-content']}>
-              <Heading
-                as={'h1'}
-                variant={'skill-card-title'}
-                textAlign={'center'}
-              >
-                Web Development
-              </Heading>
-              <Divider />
-              <Box>
-                <Stat p={2}>
-                  <StatLabel>HTML</StatLabel>
-                  <StatNumber>100%</StatNumber>
-                  <StatHelpText>
-                    <Progress
-                      value={100}
-                      colorScheme={'lavender'}
-                      size={'sm'}
-                    />
-                  </StatHelpText>
-                </Stat>
-                <Stat p={2}>
-                  <StatLabel>JAVASCRIPT & TYPESCRIPT</StatLabel>
-                  <StatNumber>90%</StatNumber>
-                  <StatHelpText>
-                    <Progress value={90} colorScheme={'lavender'} size={'sm'} />
-                  </StatHelpText>
-                </Stat>
-                <Stat p={2}>
-                  <StatLabel>CSS</StatLabel>
-                  <StatNumber>70%</StatNumber>
-                  <StatHelpText>
-                    <Progress value={70} colorScheme={'lavender'} size={'sm'} />
-                  </StatHelpText>
-                </Stat>
+          {skills.map((skill, index) => (
+            <Box className={styles.card} key={index}>
+              <Box className={styles['card-content']}>
+                <Heading
+                  as={'h1'}
+                  variant={'skill-card-title'}
+                  textAlign={'center'}
+                >
+                  {skill.$title}
+                </Heading>
+                <Divider
+                  style={{
+                    borderColor: `${skillsDividerColor}`,
+                    borderWidth: '0.07rem'
+                  }}
+                />
+                <Box>
+                  {skill.$content.map((content, index) => (
+                    <Stat key={index} p={2}>
+                      <StatLabel>{content.$title}</StatLabel>
+                      <StatNumber>{content.percentage}%</StatNumber>
+                      <StatHelpText>
+                        <Progress
+                          value={content.percentage}
+                          colorScheme={'lavender'}
+                          size={'sm'}
+                        />
+                      </StatHelpText>
+                    </Stat>
+                  ))}
+                </Box>
               </Box>
             </Box>
-          </Box>
-          <Box className={styles.card}>
-            <Box className={styles['card-content']}>
-              <Heading
-                as={'h1'}
-                variant={'skill-card-title'}
-                textAlign={'center'}
-              >
-                Programming Languages
-              </Heading>
-              <Divider />
-              <Box>
-                <Stat p={2}>
-                  <StatLabel>C</StatLabel>
-                  <StatNumber>56%</StatNumber>
-                  <StatHelpText>
-                    <Progress value={56} colorScheme={'lavender'} size={'sm'} />
-                  </StatHelpText>
-                </Stat>
-                <Stat p={2}>
-                  <StatLabel>C++</StatLabel>
-                  <StatNumber>50%</StatNumber>
-                  <StatHelpText>
-                    <Progress value={50} colorScheme={'lavender'} size={'sm'} />
-                  </StatHelpText>
-                </Stat>
-                <Stat p={2}>
-                  <StatLabel>C#</StatLabel>
-                  <StatNumber>45%</StatNumber>
-                  <StatHelpText>
-                    <Progress value={45} colorScheme={'lavender'} size={'sm'} />
-                  </StatHelpText>
-                </Stat>
-              </Box>
-            </Box>
-          </Box>
-          <Box className={styles.card}>
-            <Box className={styles['card-content']}>
-              <Heading
-                as={'h1'}
-                variant={'skill-card-title'}
-                textAlign={'center'}
-              >
-                Databases
-              </Heading>
-              <Divider />
-              <Box>
-                <Stat p={2}>
-                  <StatLabel>MONGODB</StatLabel>
-                  <StatNumber>75%</StatNumber>
-                  <StatHelpText>
-                    <Progress value={75} colorScheme={'lavender'} size={'sm'} />
-                  </StatHelpText>
-                </Stat>
-                <Stat p={2}>
-                  <StatLabel>SANITY</StatLabel>
-                  <StatNumber>60%</StatNumber>
-                  <StatHelpText>
-                    <Progress value={60} colorScheme={'lavender'} size={'sm'} />
-                  </StatHelpText>
-                </Stat>
-                <Stat p={2}>
-                  <StatLabel>GRAPHQL</StatLabel>
-                  <StatNumber>45%</StatNumber>
-                  <StatHelpText>
-                    <Progress value={45} colorScheme={'lavender'} size={'sm'} />
-                  </StatHelpText>
-                </Stat>
-              </Box>
-            </Box>
-          </Box>
-          <Box className={styles.card}>
-            <Box className={styles['card-content']}>
-              <Heading
-                as={'h1'}
-                variant={'skill-card-title'}
-                textAlign={'center'}
-              >
-                Extras
-              </Heading>
-              <Divider />
-              <Box>
-                <Stat p={2}>
-                  <StatLabel>JAVA</StatLabel>
-                  <StatNumber>50%</StatNumber>
-                  <StatHelpText>
-                    <Progress value={50} colorScheme={'lavender'} size={'sm'} />
-                  </StatHelpText>
-                </Stat>
-                <Stat p={2}>
-                  <StatLabel>PYTHON</StatLabel>
-                  <StatNumber>40%</StatNumber>
-                  <StatHelpText>
-                    <Progress value={40} colorScheme={'lavender'} size={'sm'} />
-                  </StatHelpText>
-                </Stat>
-                <Stat p={2}>
-                  <StatLabel>GOLANG</StatLabel>
-                  <StatNumber>15%</StatNumber>
-                  <StatHelpText>
-                    <Progress value={15} colorScheme={'lavender'} size={'sm'} />
-                  </StatHelpText>
-                </Stat>
-              </Box>
-            </Box>
-          </Box>
+          ))}
         </Box>
       </Container>
     </>

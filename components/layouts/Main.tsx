@@ -3,14 +3,14 @@ import dynamic from 'next/dynamic'
 import { Container, Box } from '@chakra-ui/react'
 import Navbar from '../Navbar'
 import Footer from '../Footer'
-import Loader from '../DogLoader'
+import Loader from '../ObjectLoader'
 
 type Props = {
   children: React.ReactNode
   router: any
 }
 
-const DogFigurine = dynamic(() => import('../DogFigurine') as any, {
+const ComputerModel = dynamic(() => import('../ComputerModel') as any, {
   ssr: false,
   loading: () => <Loader />
 })
@@ -23,12 +23,25 @@ const Main = ({ children, router }: Props) => {
         <meta name="description" content="Sixhei's homepage" />
         <meta name="author" content="Sixhei Tartari" />
         <meta name="author" content="sixheitartari" />
-        <link rel="apple-touch-icon" href="apple-touch-icon.png" />
         <link
-          rel="shortcut icon"
-          href="images/favicon.ico"
-          type="image/x-icon"
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png"
         />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png"
+        />
+        <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+        <link rel="manifest" href="/site.webmanifest" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@LeJhin1" />
         <meta name="twitter:creator" content="@LeJhin1" />
@@ -43,7 +56,7 @@ const Main = ({ children, router }: Props) => {
       <Container maxW="container.md" pt={20} minH={'100vh'}>
         {/* Check if the router path is the 404 page and do not display the dog figurine */}
         <Box position={'relative'} zIndex={'0'}>
-          <DogFigurine />
+          <ComputerModel />
         </Box>
         <Box mt={['0rem', '2rem', '5rem']} position={'relative'} zIndex={'1'}>
           {children}

@@ -37,12 +37,87 @@
       "description": "Graduated from the University of Vlora, with a Bachelor of Science in Computer Science. I'm currently working as a freelance developer and I'm always looking for new projects."
     }
   ],
+  "$skills": [
+    {
+      "$title": "Web Development",
+      "$id": "P8xRp4TG",
+      "$content": [
+        {
+          "$title": "HTML",
+          "percentage": 100
+        },
+        {
+          "$title": "JavaScript & TypeScript",
+          "percentage": 90
+        },
+        {
+          "$title": "CSS",
+          "percentage": 70
+        }
+      ]
+    },
+    {
+      "$title": "Programming Languages",
+      "$id": "huAZOQGa",
+      "$content": [
+        {
+          "$title": "C",
+          "percentage": 56
+        },
+        {
+          "$title": "C++",
+          "percentage": 50
+        },
+        {
+          "$title": "C#",
+          "percentage": 45
+        }
+      ]
+    },
+    {
+      "$title": "Databases",
+      "$id": "NSRKSyEC",
+      "$content": [
+        {
+          "$title": "MONGODB",
+          "percentage": 75
+        },
+        {
+          "$title": "SANITY",
+          "percentage": 60
+        },
+        {
+          "$title": "GRAPHQL",
+          "percentage": 45
+        }
+      ]
+    },
+    {
+      "$title": "Extra Skills",
+      "$id": "GSImeSTY",
+      "$content": [
+        {
+          "$title": "JAVA",
+          "percentage": 50
+        },
+        {
+          "$title": "PYTHON",
+          "percentage": 40
+        },
+        {
+          "$title": "GOLANG",
+          "percentage": 15
+        }
+      ]
+    }
+  ],
   "$projects": [
     {
       "$title": "Univlora Student Forum",
       "$id": "OCsMv/VG",
       "$slug": "univlora-student-forum",
       "link": "https://univlora-student-forum.vercel.app/",
+      "source": "https://github.com/Democles85/student_forum",
       "description": "A forum / blog website used by the students to get information about subjects and undertake courses or quizzes about the classes they enroll.",
       "author": "Sixhei Tartari",
       "year": "2022",
@@ -64,14 +139,14 @@
       "thumbnail": "/images/works/univlora_student_forum.png",
       "images": [
         "/images/works/univlora_student_forum_1.png"
-      ],
-      "source": "https://github.com/Democles85/student_forum"
+      ]
     },
     {
       "$title": "Pizza Ordering App",
       "$id": "OCsMv/VG",
       "$slug": "pizza-ordering-app",
       "link": "",
+      "source": "https://github.com/Democles85/food_ordering_app",
       "description": "Coming soon...",
       "author": "Sixhei Tartari",
       "year": "2022",
@@ -91,14 +166,14 @@
         "REST API",
         "CookieAuth"
       ],
-      "thumbnail": "/images/works/pizza_ordering_app_thumbnail.png",
-      "source": "https://github.com/Democles85/food_ordering_app"
+      "thumbnail": "/images/works/pizza_ordering_app_thumbnail.png"
     },
     {
       "$title": "Resonate with Yourself",
       "$id": "vOMv8Qrl",
       "$slug": "resonate-with-yourself",
       "link": "https://resonatewithyourself.com/",
+      "source": "https://github.com/Democles85/colombo_portfolio",
       "description": "A landing page for a therapist including (About Me - Contact Form - General Information - Services)",
       "author": "Sixhei Tartari",
       "year": "2022",
@@ -133,6 +208,21 @@
       "thumbnail": "/images/works/sound_me_youth_thumbnail.png"
     },
     {
+      "$title": "RSA Implementation in C++",
+      "$id": "Z1uABDnC",
+      "$slug": "rsa-implementation-in-cpp",
+      "description": "This is the product of a research I did with my Cyber Security professor in the University of Vlora, Albania. I implemented the RSA algorithm in C++ and I did the testing of the algorithm.",
+      "author": "Sixhei Tartari",
+      "year": "2021",
+      "dateStarted": "December 2021",
+      "dateFinished": "December 2021",
+      "timeToComplete": "2 weeks",
+      "technologies": [
+        "C++"
+      ],
+      "thumbnail": "/images/works/rsa_algorithm_thumbnail.jpg"
+    },
+    {
       "$title": "Math Game",
       "$id": "PDN2Dm7+",
       "$slug": "math-game",
@@ -149,21 +239,6 @@
         "JavaScript"
       ],
       "thumbnail": "/images/works/maths_game_thumbnail.png"
-    },
-    {
-      "$title": "RSA Implementation in C++",
-      "$id": "Z1uABDnC",
-      "$slug": "rsa-implementation-in-cpp",
-      "description": "This is the product of a research I did with my Cyber Security professor in the University of Vlora, Albania. I implemented the RSA algorithm in C++ and I did the testing of the algorithm.",
-      "author": "Sixhei Tartari",
-      "year": "2021",
-      "dateStarted": "March 2019",
-      "dateFinished": "March 2019",
-      "timeToComplete": "2 weeks",
-      "technologies": [
-        "C++"
-      ],
-      "thumbnail": "/images/works/rsa_algorithm_thumbnail.jpg"
     },
     {
       "$title": "News Website",

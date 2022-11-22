@@ -38,7 +38,7 @@ const components = {
     variants: {
       'project-link': (props: StyleFunctionProps | Record<string, any>) => ({
         textDecoration: 'none',
-        color: mode('#3D7AED', '#FF63C3')(props)
+        color: mode('#8080ff', '#b1b2ff')(props)
       }),
       'project-source': {
         background: 'linear-gradient(90deg, #FF63C3, #3D7AED)',
@@ -56,8 +56,7 @@ const colors = {
     200: '#b1b2ff',
     300: '#8080ff',
     400: '#4d4dff',
-    500: '#8080ff',
-    600: '#4d4dff'
+    500: '#4d4dff'
   }
 }
 

@@ -125,7 +125,7 @@ const Home: NextPage = () => {
               display={'inline-block'}
             >
               <Image
-                src={'/images/sixhei_tartari.jpeg'}
+                src={'/images/sixhei_tartari_zoomed.jpeg'}
                 alt={'Profile image'}
               />
             </Box>
@@ -161,7 +161,13 @@ const Home: NextPage = () => {
               fontWeight={'bold'}
             >
               Univlora Student Forum
-              <Icon as={ExternalLinkIcon} ml={1} mb={3} color={'#e52e71'} />
+              <Icon
+                as={ExternalLinkIcon}
+                ml={1}
+                mb={3}
+                w={3}
+                color={'#e52e71'}
+              />
             </Link>
             .
           </Paragraph>

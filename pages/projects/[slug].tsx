@@ -5,6 +5,7 @@ import {
   Container,
   Divider,
   Heading,
+  Image,
   Link,
   List,
   ListItem,
@@ -26,6 +27,16 @@ export default function Project() {
 
   return (
     <Layout title={project?.$title}>
+      <Box paddingY={'1rem'}>
+        <Image
+          src={project?.thumbnail}
+          alt={project?.$title}
+          loading={'lazy'}
+          borderRadius={'lg'}
+          border={'2px solid rgba(255, 255, 255, 0.5)'}
+          boxShadow={'0 0 10px rgba(0, 0, 0, 0.5)'}
+        />
+      </Box>
       <Container maxW={'container.sm'}>
         <Box>
           <Title>
@@ -36,7 +47,7 @@ export default function Project() {
           </Title>
           <Paragraph>{project?.description}</Paragraph>
           <List ml={4} my={4}>
-            <ListItem py={1}>
+            <ListItem py={'0.25rem'}>
               <Meta>Stack</Meta>
               {project?.technologies.map((item, index) => (
                 <span key={index}>
@@ -49,10 +60,14 @@ export default function Project() {
               display={'flex'}
               flexDir={'row'}
               alignItems={'center'}
-              py={1}
+              py={'0.25rem'}
             >
               <Meta>Source</Meta>
-              <Link href={project?.source} variant={'project-source'}>
+              <Link
+                href={project?.source}
+                variant={'project-source'}
+                target={'_blank'}
+              >
                 {project?.source}
               </Link>
             </ListItem>
