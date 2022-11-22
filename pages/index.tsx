@@ -34,7 +34,7 @@ import { Bio } from '../components/Bio'
 import { Skills } from '../components/Skills'
 import { OnTheInternet } from '../components/OntheInternet'
 
-const ProfileImage = chakra(Image, {
+const ofileImage = chakra(Image, {
   shouldForwardProp: prop => ['width', 'height', 'src', 'alt'].includes(prop)
 })
 

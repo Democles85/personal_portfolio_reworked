@@ -39,7 +39,12 @@ const components = {
       'project-link': (props: StyleFunctionProps | Record<string, any>) => ({
         textDecoration: 'none',
         color: mode('#3D7AED', '#FF63C3')(props)
-      })
+      }),
+      'project-source': {
+        background: 'linear-gradient(90deg, #FF63C3, #3D7AED)',
+        WebkitBackgroundClip: 'text',
+        backgroundClip: 'text'
+      }
     }
   }
 }

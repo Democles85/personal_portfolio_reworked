@@ -63,7 +63,8 @@
       "thumbnail": "/images/works/univlora_student_forum.png",
       "images": [
         "/images/works/univlora_student_forum_1.png"
-      ]
+      ],
+      "source": "https://github.com/Democles85/student_forum"
     },
     {
       "$title": "Resonate with Yourself",
@@ -119,14 +120,29 @@
       "thumbnail": "/images/works/maths_game_thumbnail.png"
     },
     {
+      "$title": "RSA Implementation in C++",
+      "$id": "Z1uABDnC",
+      "$slug": "rsa-implementation-in-cpp",
+      "description": "This is the product of a research I did with my Cyber Security professor in the University of Vlora, Albania. I implemented the RSA algorithm in C++ and I did the testing of the algorithm.",
+      "author": "Sixhei Tartari",
+      "year": "2021",
+      "dateStarted": "March 2019",
+      "dateFinished": "March 2019",
+      "timeToComplete": "2 weeks",
+      "technologies": [
+        "C++"
+      ],
+      "thumbnail": "/images/works/rsa_algorithm_thumbnail.jpg"
+    },
+    {
       "$title": "News Website",
       "$id": "HPCbYc50",
       "$slug": "news-website",
       "description": "My first attempt on creating a functional website. Having a boring topic, I didn't have much to work with and also now that I look back at it, I am ashamed, not too much to say anyway.",
       "author": "Sixhei Tartari",
-      "year": "2019",
-      "dateStarted": "December 2019",
-      "dateFinished": "January 2020",
+      "year": "2018",
+      "dateStarted": "December 2018",
+      "dateFinished": "December 2018",
       "timeToComplete": "3 weeks",
       "technologies": [
         "HTML",

@@ -42,8 +42,12 @@ const Main = ({ children, router }: Props) => {
       <Navbar path={router.asPath} />
       <Container maxW="container.md" pt={20} minH={'100vh'}>
         {/* Check if the router path is the 404 page and do not display the dog figurine */}
-        <DogFigurine />
-        <Box mt={['0rem', '2rem', '5rem']}>{children}</Box>
+        <Box position={'relative'} zIndex={'0'}>
+          <DogFigurine />
+        </Box>
+        <Box mt={['0rem', '2rem', '5rem']} position={'relative'} zIndex={'1'}>
+          {children}
+        </Box>
       </Container>
       <Footer />
     </Box>

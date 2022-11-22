@@ -79,6 +79,7 @@ const Projects = () => {
                               mt={2}
                               textAlign={'justify'}
                               className={styles['card-description']}
+                              noOfLines={3}
                             >
                               {project.description}
                             </Text>

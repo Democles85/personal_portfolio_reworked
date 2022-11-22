@@ -34,6 +34,7 @@ const LinkItem = ({ href, path, _target, children, ...props }: Props) => {
         bg={active ? 'lavender.200' : undefined}
         color={active ? '#202023' : inactiveColor}
         target={_target}
+        borderRadius={'lg'}
         {...props}
       >
         {children}
@@ -90,6 +91,13 @@ const Navbar = (props: { path: any }) => {
           </LinkItem>
           <LinkItem href="/contact" path={path} _target={''}>
             Contact
+          </LinkItem>
+          <LinkItem
+            href="https://github.com/Democles85/personal_portfolio_reworked/"
+            path={path}
+            _target={''}
+          >
+            Source
           </LinkItem>
         </Stack>
 

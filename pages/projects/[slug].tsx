@@ -5,6 +5,7 @@ import {
   Container,
   Divider,
   Heading,
+  Link,
   List,
   ListItem,
   Text
@@ -38,7 +39,7 @@ export default function Project() {
           </Title>
           <Paragraph>{project?.description}</Paragraph>
           <List ml={4} my={4}>
-            <ListItem>
+            <ListItem py={1}>
               <Meta>Stack</Meta>
               {project?.technologies.map((item, index) => (
                 <span key={index}>
@@ -46,6 +47,17 @@ export default function Project() {
                   {item}
                 </span>
               ))}
+            </ListItem>
+            <ListItem
+              display={'flex'}
+              flexDir={'row'}
+              alignItems={'center'}
+              py={1}
+            >
+              <Meta>Source</Meta>
+              <Link href={project?.source} variant={'project-source'}>
+                {project?.source}
+              </Link>
             </ListItem>
           </List>
         </Box>

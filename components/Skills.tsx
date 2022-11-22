@@ -1,5 +1,6 @@
 import {
   Box,
+  Code,
   Container,
   Divider,
   Heading,
@@ -9,6 +10,7 @@ import {
   StatLabel,
   StatNumber,
   StyledStepper,
+  Text,
   useColorModeValue
 } from '@chakra-ui/react'
 import styles from '../styles/skills.module.css'
@@ -37,6 +39,15 @@ export const Skills = () => {
       >
         My Skills
       </Heading>
+      <Box mb={'1rem'} opacity={0.8}>
+        <Code borderRadius={'lg'} fontStyle={'italic'} fontSize={'12px'}>
+          <Text p={'0.3rem'}>
+            Note: The calculations are done while keeping in mind my experience
+            with the particular language or skill and the time I have used them
+            for. All of them are based on other people feedbacks.
+          </Text>
+        </Code>
+      </Box>
       <Container maxW={'container.lg'}>
         <Box
           className={styles.cards}
@@ -112,9 +123,9 @@ export const Skills = () => {
                 </Stat>
                 <Stat p={2}>
                   <StatLabel>C#</StatLabel>
-                  <StatNumber>35%</StatNumber>
+                  <StatNumber>45%</StatNumber>
                   <StatHelpText>
-                    <Progress value={35} colorScheme={'lavender'} size={'sm'} />
+                    <Progress value={45} colorScheme={'lavender'} size={'sm'} />
                   </StatHelpText>
                 </Stat>
               </Box>
