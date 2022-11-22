@@ -6,7 +6,6 @@ import {
   Divider,
   Heading,
   Link,
-  Link,
   List,
   ListItem,
   Text
