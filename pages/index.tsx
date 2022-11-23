@@ -8,15 +8,6 @@ import {
   Link,
   Icon,
   Button,
-  Stat,
-  StatLabel,
-  StatNumber,
-  StatHelpText,
-  Progress,
-  SimpleGrid,
-  Divider,
-  List,
-  ListItem,
   useColorMode
 } from '@chakra-ui/react'
 import TypewriterComponent from 'typewriter-effect'
@@ -29,12 +20,12 @@ import { ChevronRightIcon, ExternalLinkIcon } from '@chakra-ui/icons'
 import useSWR from 'swr'
 import styles from '../styles/skills.module.css'
 import fetcher from '../utils/fetcher'
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import { Bio } from '../components/Bio'
 import { Skills } from '../components/Skills'
 import { OnTheInternet } from '../components/OntheInternet'
 
-const ofileImage = chakra(Image, {
+const ProfileImage = chakra(Image, {
   shouldForwardProp: prop => ['width', 'height', 'src', 'alt'].includes(prop)
 })
 
