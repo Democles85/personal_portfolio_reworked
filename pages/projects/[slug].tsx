@@ -1,3 +1,4 @@
+import { ExternalLinkIcon } from '@chakra-ui/icons'
 import {
   Badge,
   Box,
@@ -5,6 +6,7 @@ import {
   Container,
   Divider,
   Heading,
+  Icon,
   Image,
   Link,
   List,
@@ -12,6 +14,7 @@ import {
   Text
 } from '@chakra-ui/react'
 import { useRouter } from 'next/router'
+import { HiExternalLink } from 'react-icons/hi'
 import { Layout } from '../../components/layouts/Layout'
 import Paragraph from '../../components/Paragraph'
 import { Meta, Title } from '../../components/ProjectsItems'
@@ -27,6 +30,21 @@ export default function Project() {
 
   return (
     <Layout title={project?.$title}>
+      {/* SVG Painter */}
+      <svg key={'svg__painter'} width={'0'} height={'0'}>
+        <linearGradient
+          id={'svg__painter'}
+          x1={'100%'}
+          y1={'0%'}
+          x2={'0%'}
+          y2={'0%'}
+          gradientUnits={'userSpaceOnUse'}
+        >
+          <stop offset={'0%'} stopColor={'#FF63C3'} />
+          <stop offset={'100%'} stopColor={'#3D7AED'} />
+        </linearGradient>
+      </svg>
+      {/* SVG Painter */}
       <Box paddingY={'1rem'}>
         <Image
           src={project?.thumbnail}
@@ -68,8 +86,16 @@ export default function Project() {
                 variant={'project-source'}
                 target={'_blank'}
               >
-                {project?.source}
+                Github
               </Link>
+              <HiExternalLink
+                style={{
+                  width: '14px',
+                  marginBottom: '0.25rem',
+                  marginLeft: '0.2rem',
+                  fill: 'url(#svg__painter)'
+                }}
+              />
             </ListItem>
           </List>
         </Box>
