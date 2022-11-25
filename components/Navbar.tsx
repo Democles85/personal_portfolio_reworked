@@ -87,15 +87,16 @@ const Navbar = (props: { path: any }) => {
           <LinkItem href="/projects" path={path} _target={''}>
             Projects
           </LinkItem>
-          <LinkItem href="/contact" path={path} _target={''}>
-            Contact
+          <LinkItem href="/cv" path={path} _target={''}>
+            CV
           </LinkItem>
           <LinkItem
             href="https://github.com/Democles85/personal_portfolio_reworked/"
             path={path}
             _target={'_blank'}
           >
-            Source <Icon as={ExternalLinkIcon} mb={3} w={3} />
+            Source{' '}
+            <Icon as={ExternalLinkIcon} w={3} ml={1} position={'absolute'} />
           </LinkItem>
         </Stack>
 
@@ -127,8 +128,8 @@ const Navbar = (props: { path: any }) => {
                 <NextLink href={'/projects'} passHref>
                   <MenuItem as={Link}>Projects</MenuItem>
                 </NextLink>
-                <NextLink href={'/contact'} passHref>
-                  <MenuItem as={Link}>Contact</MenuItem>
+                <NextLink href={'/cv'} passHref>
+                  <MenuItem as={Link}>CV</MenuItem>
                 </NextLink>
                 <NextLink
                   href={

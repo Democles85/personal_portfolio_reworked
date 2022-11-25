@@ -5,10 +5,31 @@ import {
   Heading,
   useColorModeValue
 } from '@chakra-ui/react'
+import { useEffect } from 'react'
+import styles from '../styles/bio.module.css'
 import { BioSection, BioYear } from './BioComponents'
 import BioData from '../utils/data.json'
+import { BioAnimated } from './Section'
 
 export const Bio = () => {
+  useEffect(() => {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        console.log(entry)
+        if (entry.isIntersecting) {
+          entry.target.classList.add(styles.show)
+        } else {
+          entry.target.classList.remove(styles.show)
+        }
+      })
+    })
+
+    const hiddenElements = document.querySelectorAll(`.${styles.hidden}`)
+    hiddenElements.forEach(element => {
+      observer.observe(element)
+    })
+  })
+
   const bioData = BioData.$bio
   const circleColor = useColorModeValue('#1a202c', 'lavender.200')
 
@@ -26,6 +47,7 @@ export const Bio = () => {
         {bioData.map((bio, index) => (
           <Box
             key={index}
+            className={styles.hidden}
             display={'flex'}
             position={'relative'}
             borderLeft={'2px gray solid'}

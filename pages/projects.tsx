@@ -12,7 +12,7 @@ import {
 import { useEffect } from 'react'
 import { Layout } from '../components/layouts/Layout'
 import styles from '../styles/projects.module.css'
-import Section from '../components/Section'
+import { Section } from '../components/Section'
 import data from '../utils/data.json'
 
 const Projects = () => {

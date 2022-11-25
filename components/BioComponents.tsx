@@ -5,6 +5,7 @@ export const BioSection = styled(Box)`
   text-align: justify;
   padding-left: 3.4em;
   text-indent: -3.4em;
+  margin-bottom: 1.5em;
 `
 
 export const BioYear = styled.span`
