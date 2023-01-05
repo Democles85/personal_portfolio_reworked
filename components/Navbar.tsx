@@ -12,33 +12,71 @@ import {
   MenuItem,
   MenuList,
   Stack,
+  Text,
   useColorModeValue
 } from '@chakra-ui/react'
 import Logo from './Logo'
 import NextLink from 'next/link'
 import ThemeToggleSwitch from './themeToggleSwitch'
 
-type Props = {
-  children: React.ReactNode
+import styles from '../styles/TextGradient.module.css'
+
+interface LinkItemProps {
   href: string
   path: string
   _target?: string
+  children: React.ReactNode
 }
 
-const LinkItem = ({ href, path, _target, children, ...props }: Props) => {
+const LinkItem = ({
+  href,
+  path,
+  _target,
+  children,
+  ...props
+}: LinkItemProps) => {
   const active = path === href || path.startsWith(href + '/')
   const inactiveColor = useColorModeValue('#202023a0', 'whiteAlpha.900')
   return (
     <NextLink href={href} passHref>
       <Link
+        fontWeight={active ? 'bold' : 'normal'}
         p={2}
-        bg={active ? 'lavender.200' : undefined}
-        color={active ? '#202023' : inactiveColor}
+        color={inactiveColor}
+        _hover={{
+          textDecoration: 'none',
+          cursor: 'default'
+        }}
         target={_target}
-        borderRadius={'lg'}
         {...props}
       >
-        {children}
+        <Text
+          position={'relative'}
+          className={active ? styles['text-gradient'] : undefined}
+          _hover={{
+            cursor: 'pointer',
+            _before: {
+              content: '""',
+              position: 'absolute',
+              top: '110%',
+              width: '120%',
+              left: '-10%',
+              height: '3px',
+              borderRadius: '2px',
+              background:
+                'linear-gradient(90deg, rgba(255,99,195,1) 0%, rgba(61,122,237,1) 50%, rgba(255,99,195,1) 100%) 0 0 / 400% 100%',
+              animation: 'gradient 4s linear infinite',
+
+              '@keyframes gradient': {
+                to: {
+                  backgroundPosition: '400% 0'
+                }
+              }
+            }
+          }}
+        >
+          {children}
+        </Text>
       </Link>
     </NextLink>
   )

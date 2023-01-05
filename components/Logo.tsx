@@ -2,6 +2,8 @@ import styled from '@emotion/styled'
 import { Divider, Link, Text, useColorModeValue } from '@chakra-ui/react'
 import Typewriter from 'typewriter-effect'
 
+import styles from '../styles/TextGradient.module.css'
+
 const LogoBox = styled.div`
   display: inline-flex;
   align-items: center;
@@ -22,10 +24,14 @@ const LogoBox = styled.div`
 `
 
 const Logo = () => {
-  const logo = '/images/code.png'
-
   return (
-    <Link href="/">
+    <Link
+      href="/"
+      position={'relative'}
+      _hover={{
+        textDecoration: 'none'
+      }}
+    >
       <LogoBox>
         <svg
           width="30"
@@ -62,6 +68,28 @@ const Logo = () => {
           ml={2}
           fontFamily={"'Silkscreen', cursive"}
           fontSize={{ base: '1rem', md: '1.75rem', lg: '1.75rem' }}
+          position={'relative'}
+          _hover={{
+            cursor: 'pointer',
+            _before: {
+              content: '""',
+              position: 'absolute',
+              top: '90%',
+              width: '100%',
+              left: '0%',
+              height: '2px',
+              borderRadius: '2px',
+              background:
+                'linear-gradient(90deg, rgba(255,99,195,1) 0%, rgba(61,122,237,1) 50%, rgba(255,99,195,1) 100%) 0 0 / 400% 100%',
+              animation: 'gradient 4s linear infinite',
+
+              '@keyframes gradient': {
+                to: {
+                  backgroundPosition: '400% 0'
+                }
+              }
+            }
+          }}
         >
           Sixhei Tartari
         </Text>
