@@ -24,6 +24,7 @@ import { useEffect } from 'react'
 import { Bio } from '../components/Bio'
 import { Skills } from '../components/Skills'
 import { OnTheInternet } from '../components/OntheInternet'
+import Contact from '../components/Contact'
 
 const ProfileImage = chakra(Image, {
   shouldForwardProp: prop => ['width', 'height', 'src', 'alt'].includes(prop)
@@ -186,6 +187,11 @@ const Home: NextPage = () => {
       <Section delay={1.4}>
         <OnTheInternet />
       </Section>
+
+      {/* Contact Section */}
+      {/* <Section delay={1.6}>
+        <Contact />
+      </Section> */}
     </Layout>
   )
 }

@@ -33,7 +33,13 @@ export const OnTheInternet = () => {
           maxW={'100%'}
         >
           <ListItem>
-            <Link href="https://github.com/Democles85" target="_blank">
+            <Link
+              href="https://github.com/Democles85"
+              target="_blank"
+              _hover={{
+                textDecoration: 'none'
+              }}
+            >
               <Button
                 variant="ghost"
                 colorScheme="lavender"
@@ -47,6 +53,9 @@ export const OnTheInternet = () => {
             <Link
               href="https://www.linkedin.com/in/sixhei-tartari/"
               target="_blank"
+              _hover={{
+                textDecoration: 'none'
+              }}
             >
               <Button
                 variant="ghost"
@@ -58,7 +67,13 @@ export const OnTheInternet = () => {
             </Link>
           </ListItem>
           <ListItem>
-            <Link href="https://twitter.com/LeJhin1" target="_blank">
+            <Link
+              href="https://twitter.com/LeJhin1"
+              target="_blank"
+              _hover={{
+                textDecoration: 'none'
+              }}
+            >
               <Button
                 variant="ghost"
                 colorScheme="lavender"
@@ -72,6 +87,9 @@ export const OnTheInternet = () => {
             <Link
               href="https://www.instagram.com/sixheitartari/"
               target="_blank"
+              _hover={{
+                textDecoration: 'none'
+              }}
             >
               <Button
                 variant="ghost"
@@ -86,6 +104,9 @@ export const OnTheInternet = () => {
             <Link
               href="https://www.discordapp.com/users/336600578237136896"
               target="_blank"
+              _hover={{
+                textDecoration: 'none'
+              }}
             >
               <Button
                 variant="ghost"
