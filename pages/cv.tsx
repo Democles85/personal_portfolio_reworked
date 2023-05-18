@@ -1,4 +1,5 @@
-import { Box, Heading, useColorMode } from '@chakra-ui/react'
+import { DownloadIcon } from '@chakra-ui/icons'
+import { Box, Button, Heading, Tooltip, useColorMode } from '@chakra-ui/react'
 import { NextPage } from 'next'
 
 const CurriculumVitae: NextPage = () => {
@@ -10,6 +11,25 @@ const CurriculumVitae: NextPage = () => {
         Curriculum Vitae - Sixhei Tartari
       </Heading>
       <Box pt={'2rem'} height={{ base: '564px', md: '1064px' }}>
+        <Tooltip label={'Download CV'} aria-label={'Download CV'}></Tooltip>
+          <Button
+            as={'a'}
+            href={pdfSRC}
+            download={'sixhei_tartari_cv.pdf'}
+            borderRadius={'full'}
+            position={'absolute'}
+            top={{ base: '6rem', md: '3rem' }}
+            right={'-1rem'}
+            zIndex={1}
+            colorScheme={'lavender'}
+            size={{ base: 'sm', md: 'md', lg: 'lg' }}
+            padding={'0.5rem'}
+            height={'40px'}
+            width={'40px'}
+          >
+            <DownloadIcon name={'download'} />
+          </Button>
+        </Tooltip>
         <iframe
           src={`${pdfSRC}#toolbar=0`}
           width={'100%'}
