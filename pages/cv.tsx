@@ -11,7 +11,7 @@ const CurriculumVitae: NextPage = () => {
         Curriculum Vitae - Sixhei Tartari
       </Heading>
       <Box pt={'2rem'} height={{ base: '564px', md: '1064px' }}>
-        <Tooltip label={'Download CV'} aria-label={'Download CV'}></Tooltip>
+        <Tooltip label={'Download CV'} aria-label={'Download CV'}>
           <Button
             as={'a'}
             href={pdfSRC}
